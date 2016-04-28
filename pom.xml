@@ -7,11 +7,18 @@
     <packaging>pom</packaging>
     <version>1.1-SNAPSHOT</version>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>9</version>
-    </parent>
+    <distributionManagement>
+        <repository>
+            <id>yandex_qa_releases</id>
+            <name>Releases</name>
+            <url>${releases-repo}</url>
+        </repository>
+        <snapshotRepository>
+            <id>yandex_qa_snapshots</id>
+            <name>Snapshots</name>
+            <url>${snapshots-repo}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <modules>
         <module>beans</module>
